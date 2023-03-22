@@ -18,10 +18,12 @@ function switchP() {
 
 boxes.forEach ((box) => {
     box.addEventListener("click", () => {
-        box.classList.add(currentP)
-        switchP()
-        checkWinner()
-        c++
+        if (!box.classList.contains("p1") && !box.classList.contains("p2")) {
+            box.classList.add(currentP)
+            switchP()
+            checkWinner()
+            c++
+        }
         if (c === 9 && w === 0) {
             alert("It's a tie!")
         }
