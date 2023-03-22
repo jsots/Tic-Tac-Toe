@@ -18,7 +18,7 @@ boxes.forEach ((box) => {
             c++
         }
         if (c === 9 && w === 0) {
-            alert("It's a tie!")
+            h3.innerText = "It's a tie!"
         }      
     })
 })
