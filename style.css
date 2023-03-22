@@ -7,9 +7,19 @@ h1 {
     text-align: center;
 }
 
+h3 {
+    color: white;
+    text-align: center;
+}
+
 h4 {
     color: white;
     text-align: center;
+}
+
+.clear {
+    display: flex;
+    justify-content: center;
 }
 
 .p1 {
