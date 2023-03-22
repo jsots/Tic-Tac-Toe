@@ -1,0 +1,32 @@
+body {
+    background: black;
+}
+
+h1 {
+    color: white;
+    text-align: center;
+}
+
+h4 {
+    color: white;
+    text-align: center;
+}
+
+.p1 {
+    background: pink;
+}
+
+.p2 {
+    background: skyblue;
+}
+
+.game-container {
+    display: grid;
+    grid-template-columns: 150px 150px 150px;
+    grid-template-rows: 150px 150px 150px;
+    justify-content: center;
+}
+
+.box {
+    border: white solid;
+}
