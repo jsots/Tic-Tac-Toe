@@ -8,17 +8,18 @@ body {
     font-family: arcade;
 }
 
-h1 {
+.h1 {
     color: white;
     text-align: center;
+    font-size: 40px;
 }
 
-h1 a {
+.h1 a {
     color:white;
     text-decoration: none;
 }
 
-h1 a:hover {
+.h1 a:hover {
     text-decoration: underline;
 }
 

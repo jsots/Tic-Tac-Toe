@@ -191,8 +191,13 @@ function checkWinner() {
     }
     if (p1Score > p2Score) {
         p1Val.classList.add("glowP1")
+        p2Val.classList.remove("glowP2")
     } else if (p2Score > p1Score) {
         p2Val.classList.add("glowP2")
+        p1Val.classList.remove("glowP1")
+    } else if (p1Score === p2Score) {
+        p2Val.classList.remove("glowP2")
+        p1Val.classList.remove("glowP1")
     }
 }
 
