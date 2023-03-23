@@ -13,6 +13,15 @@ h1 {
     text-align: center;
 }
 
+h1 a {
+    color:white;
+    text-decoration: none;
+}
+
+h1 a:hover {
+    text-decoration: underline;
+}
+
 h3 {
     color: white;
     text-align: center;
@@ -40,6 +49,9 @@ h4 {
     grid-row-start: 1;
     text-align: center;
     font-size: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .scoreP2 {
@@ -48,18 +60,27 @@ h4 {
     grid-row-start: 1;
     text-align: center;
     font-size: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .p1Val {
     color: white;
     text-align: center;
     font-size: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .p2Val {
     color: white;
     text-align: center;
     font-size: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .p1 {
@@ -82,4 +103,12 @@ h4 {
 
 .box {
     border: white solid;
+}
+
+.glowP2 {
+    text-shadow: 0px 0px 15px skyblue, 0px 0px 15px skyblue;
+}
+
+.glowP1 {
+    text-shadow: 0px 0px 15px pink, 0px 0px 15px pink;
 }

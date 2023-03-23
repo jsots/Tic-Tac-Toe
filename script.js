@@ -10,6 +10,7 @@ let p1Score = 0
 let p2Score = 0
 let p1Val = document.querySelector(".p1Val")
 let p2Val = document.querySelector(".p2Val")
+let h1 = document.querySelector("h1")
 let w = 0
 let c = 0
 
@@ -28,6 +29,9 @@ boxes.forEach ((box) => {
 })
 
 clearB.addEventListener("click", clearBoard)
+// h1.innerText.addEventListener("click", () => {
+//     reload()
+// })
 
 function switchP() {
     if (currentP === "p1") {
@@ -47,7 +51,6 @@ function checkWinner() {
         } else {
             p1Val.innerText = p1Score
         }
-        return true
     } else if (gameB[0][1].classList.contains("p1") && gameB[1][1].classList.contains("p1") && gameB[2][1].classList.contains("p1")) {
         w = 1
         h3.innerText = "P1 wins!"
@@ -57,7 +60,6 @@ function checkWinner() {
         } else {
             p1Val.innerText = p1Score
         }
-        return true
     } else if (gameB[0][2].classList.contains("p1") && gameB[1][2].classList.contains("p1") && gameB[2][2].classList.contains("p1")) {
         w = 1
         h3.innerText = "P1 wins!"
@@ -67,7 +69,6 @@ function checkWinner() {
         } else {
             p1Val.innerText = p1Score
         }
-        return true
     } else if (gameB[0][0].classList.contains("p1") && gameB[1][1].classList.contains("p1") && gameB[2][2].classList.contains("p1")) {
         w = 1
         h3.innerText = "P1 wins!"
@@ -77,7 +78,6 @@ function checkWinner() {
         } else {
             p1Val.innerText = p1Score
         }
-        return true
     } else if (gameB[0][2].classList.contains("p1") && gameB[1][1].classList.contains("p1") && gameB[2][0].classList.contains("p1")) {
         w = 1
         h3.innerText = "P1 wins!"
@@ -87,7 +87,6 @@ function checkWinner() {
         } else {
             p1Val.innerText = p1Score
         }
-        return true
     } else if (gameB[0][0].classList.contains("p2") && gameB[1][0].classList.contains("p2") && gameB[2][0].classList.contains("p2")) {
         w = 1
         h3.innerText = "P2 wins!"
@@ -97,7 +96,6 @@ function checkWinner() {
         } else {
             p2Val.innerText = p2Score
         }
-        return true
     } else if (gameB[0][1].classList.contains("p2") && gameB[1][1].classList.contains("p2") && gameB[2][1].classList.contains("p2")) {
         w = 1
         h3.innerText = "P2 wins!"
@@ -107,7 +105,6 @@ function checkWinner() {
         } else {
             p2Val.innerText = p2Score
         }
-        return true
     } else if (gameB[0][2].classList.contains("p2") && gameB[1][2].classList.contains("p2") && gameB[2][2].classList.contains("p2")) {
         w = 1
         h3.innerText = "P2 wins!"
@@ -117,7 +114,6 @@ function checkWinner() {
         } else {
             p2Val.innerText = p2Score
         }
-        return true
     } else if (gameB[0][0].classList.contains("p2") && gameB[1][1].classList.contains("p2") && gameB[2][2].classList.contains("p2")) {
         w = 1
         h3.innerText = "P2 wins!"
@@ -127,7 +123,6 @@ function checkWinner() {
         } else {
             p2Val.innerText = p2Score
         }
-        return true
     } else if (gameB[0][2].classList.contains("p2") && gameB[1][1].classList.contains("p2") && gameB[2][0].classList.contains("p2")) {
         w = 1
         h3.innerText = "P2 wins!"
@@ -137,7 +132,6 @@ function checkWinner() {
         } else {
             p2Val.innerText = p2Score
         }
-        return true
     } else if (gameB[0][0].classList.contains("p1") && gameB[0][1].classList.contains("p1") && gameB[0][2].classList.contains("p1")) {
         w = 1
         h3.innerText = "P1 wins!"
@@ -147,7 +141,6 @@ function checkWinner() {
         } else {
             p1Val.innerText = p1Score
         }
-        return true
     } else if (gameB[1][0].classList.contains("p1") && gameB[1][1].classList.contains("p1") && gameB[1][2].classList.contains("p1")) {
         w = 1
         h3.innerText = "P1 wins!"
@@ -157,7 +150,6 @@ function checkWinner() {
         } else {
             p1Val.innerText = p1Score
         }
-        return true
     } else if (gameB[2][0].classList.contains("p1") && gameB[2][1].classList.contains("p1") && gameB[2][2].classList.contains("p1")) {
         w = 1
         h3.innerText = "P1 wins!"
@@ -167,7 +159,6 @@ function checkWinner() {
         } else {
             p1Val.innerText = p1Score
         }
-        return true
     } else if (gameB[0][0].classList.contains("p2") && gameB[0][1].classList.contains("p2") && gameB[0][2].classList.contains("p2")) {
         w = 1
         h3.innerText = "P2 wins!"
@@ -177,7 +168,6 @@ function checkWinner() {
         } else {
             p2Val.innerText = p2Score
         }
-        return true
     } else if (gameB[1][0].classList.contains("p2") && gameB[1][1].classList.contains("p2") && gameB[1][2].classList.contains("p2")) {
         w = 1
         h3.innerText = "P2 wins!"
@@ -187,7 +177,6 @@ function checkWinner() {
         } else {
             p2Val.innerText = p2Score
         }
-        return true
     } else if (gameB[2][0].classList.contains("p2") && gameB[2][1].classList.contains("p2") && gameB[2][2].classList.contains("p2")) {
         w = 1
         h3.innerText = "P2 wins!"
@@ -197,11 +186,14 @@ function checkWinner() {
         } else {
             p2Val.innerText = p2Score
         }
-        return true
     } else {
-        return false
+        console.log()
     }
-    
+    if (p1Score > p2Score) {
+        p1Val.classList.add("glowP1")
+    } else if (p2Score > p1Score) {
+        p2Val.classList.add("glowP2")
+    }
 }
 
 function clearBoard () {
